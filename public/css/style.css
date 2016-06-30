@@ -1,0 +1,124 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #444;
+}
+
+a, button {
+	transition: all .3s ease-in-out;
+}
+
+hr {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/*Form*/
+.control-label {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #444;
+	font-weight: 400;
+}
+
+.form-control {
+	border-color: #efefef;
+	height: 40px;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+
+/*Button*/
+button {
+	width: 100%;
+}
+
+.btn {
+	border-radius: 0;
+	height: 45px;
+}
+
+.btn-primary {
+	background-color: #9dbd1d;
+	border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: #aed028;
+	border: none;
+}
+
+.btn-save {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.brand {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.box_mode {
+	border-left: 1px solid #efefef;
+	border-right: 1px solid #efefef;
+}
+
+.title {
+	margin-bottom: 10px;
+}
+
+.title-tag, .release-tag {
+	color: #666;
+	font-size: 15px;
+	font-weight: 300;
+	margin: 0;
+}
+
+.title-info, .release-info {
+	font-size: 20px;
+	font-weight: bold;
+	color: #666;
+}
+
+.release-info {
+	margin: 0;
+}
+
+.release-info i {
+	color: #5c6d17;
+	margin-right: 10px;
+}
+
+.rating-col {
+	text-align: right;
+	vertical-align: middle;
+}
+
+.rating-wrapper {
+	background: #9dbd1d;
+	border-radius: 6px;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.rating-tag {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.rating-score {
+	font-size: 50px;
+	font-weight: bold;
+	display: block;
+	line-height: 1.2;
+	margin: 0;
+}
+
+/*Table*/

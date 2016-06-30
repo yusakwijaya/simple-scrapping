@@ -1,0 +1,83 @@
+doctype html
+head
+    meta(charset="utf-8")
+    title ProjecTA - Javascript Class Malang
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto', type='text/css')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1", crossorigin="anonymous")
+    link(rel='stylesheet', href='/static/css/style.css', type='text/css')
+
+    //if lt IE 9
+        script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+        script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+body
+    .container
+        .row
+            .col-sm-6.col-sm-offset-3.box_mode
+                //- Logo
+                img(src="static/img/logo.png", width="100").center-block.brand
+
+                //- URL Form
+                form(method='post', action='/')
+                    fieldset
+                        //- Form input URL
+                        .form-group.clearfix
+                            .col-sm-12
+                                input(type='text', name='urlinput', value='', placeholder='Insert the URL Here').form-control.input-md
+
+                //- Info Form
+                form(method='post', action='/')
+                    fieldset
+                        //- Form input title
+                        .form-group.clearfix.col-xs-12
+                            label(for='titleinput').control-label Title
+                            div
+                                input(type='text', name='titleinput', value=''+ objectjson.title).form-control.input-md
+
+                        //- Form input release
+                        .form-group.clearfix.col-xs-6
+                            label(for='releaseinput').control-label Release
+                            div
+                                input(type='text', name='releaseinput', value=''+ objectjson.release).form-control.input-md
+
+                        //- Form input rating
+                        .form-group.clearfix.col-xs-6
+                            label(for='ratinginput').control-label Rating
+                            div
+                                input(type='text', name='ratinginput', value=''+ objectjson.rating).form-control.input-md
+
+                        // Button Add
+                        .form-group.clearfix.col-xs-12
+                            div
+                                button(name='buttonsave', type='submit').btn.btn-primary.btn-save Save
+
+                div.clearfix
+
+                .col-sm-12
+                    //- list scraping
+                    h4.title List Scraping
+                    hr
+                    table(width='100%')
+                        tbody
+                            each i in {objectjson}
+                                tr
+                                    td(width=60+'%') 
+                                        p.title-tag Title
+                                        p.title-info= i.title
+                                    td(rowspan=2, width=40+'%').rating-col
+                                        div.rating-wrapper
+                                            p.rating-tag rating
+                                                span.rating-score= i.rating
+                                tr
+                                    td
+                                        p.release-tag Release
+                                        p.release-info
+                                            i.fa.fa-calendar
+                                            span= i.release
+                                tr
+                                    td(colspan=3)
+                                        hr
+
+    script(src="http://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
